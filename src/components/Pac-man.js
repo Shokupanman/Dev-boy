@@ -4,7 +4,7 @@ import './Pac-man.scss'
 function PacMan() {
   return (
     <div>
-      <h1>pac-man</h1>
+      <h1 style={{ color: 'white' }}>pac-man</h1>
     </div>
   )
 }

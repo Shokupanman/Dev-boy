@@ -4,7 +4,7 @@ import './Snake.scss'
 function Snake() {
   return (
     <div>
-      <h1>Snake</h1>
+      <h1 style={{ color: 'white' }}>Snake</h1>
     </div>
   )
 }

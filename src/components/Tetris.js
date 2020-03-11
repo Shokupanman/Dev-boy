@@ -4,7 +4,7 @@ import './Tetris.scss'
 function Tetris() {
   return (
     <div>
-      <h1>Tetris</h1>
+      <h1 style={{ color: 'white' }}>Tetris</h1>
     </div>
   )
 }
