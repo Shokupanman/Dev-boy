@@ -1,0 +1,39 @@
+#dbButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: initial;
+  border-color: black;
+  padding-top: 2rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 75vw;
+  height: 70vh;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 77vh;
+  flex-direction: row;
+  padding: 2rem;
+  padding-top: 0;
+  background-color: #ffb750;
+}
+
+.buttons {
+  margin-right: 2rem;
+}
