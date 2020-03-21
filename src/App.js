@@ -13,10 +13,15 @@ import snakeImg from './img/snake.png'
 import tetrisImg from './img/tetris.png'
 
 function App() {
-  const [tetrisOn, setTetris] = useState(false)
-  const [pacmanOn, setPacman] = useState(false)
-  const [snakeOn, setSnake] = useState(false)
+  let [tetrisOn, setTetris] = useState(false)
+  let [pacmanOn, setPacman] = useState(false)
+  let [snakeOn, setSnake] = useState(false)
 
+  const tetrisSwtich = () => {
+    setTetris((tetrisOn = true))
+    setPacman((pacmanOn = false))
+    setSnake((snakeOn = false))
+  }
   return (
     <div className="App">
       <header
@@ -49,9 +54,6 @@ function App() {
                 maxHeight: '2.5rem',
                 maxWidth: '2.5rem'
               }}
-              onClick={
-                (() => setTetris(true), setPacman(false), setSnake(false))
-              }
             >
               <img
                 src={tetrisImg}
@@ -69,9 +71,6 @@ function App() {
                 maxHeight: '2.5rem',
                 maxWidth: '2.5rem'
               }}
-              onClick={
-                (() => setSnake(true), setTetris(false), setPacman(false))
-              }
             >
               <img
                 src={snakeImg}
@@ -92,9 +91,6 @@ function App() {
                 maxHeight: '2.5rem',
                 maxWidth: '2.5rem'
               }}
-              onClick={
-                (() => setPacman(true), setTetris(false), setSnake(false))
-              }
             >
               <img
                 src={pacmanImg}
