@@ -21,7 +21,29 @@ function App() {
     setTetris((tetrisOn = true))
     setPacman((pacmanOn = false))
     setSnake((snakeOn = false))
+    console.log(tetrisOn)
+    console.log(pacmanOn)
+    console.log(snakeOn)
   }
+
+  const pacmanSwitch = () => {
+    setPacman((pacmanOn = true))
+    setSnake((snakeOn = false))
+    setTetris((tetrisOn = false))
+    console.log(tetrisOn)
+    console.log(pacmanOn)
+    console.log(snakeOn)
+  }
+
+  const snakeSwitch = () => {
+    setPacman((pacmanOn = false))
+    setSnake((snakeOn = true))
+    setTetris((tetrisOn = false))
+    console.log(tetrisOn)
+    console.log(pacmanOn)
+    console.log(snakeOn)
+  }
+
   return (
     <div className="App">
       <header
@@ -54,6 +76,7 @@ function App() {
                 maxHeight: '2.5rem',
                 maxWidth: '2.5rem'
               }}
+              onClick={() => tetrisSwtich()}
             >
               <img
                 src={tetrisImg}
@@ -71,6 +94,7 @@ function App() {
                 maxHeight: '2.5rem',
                 maxWidth: '2.5rem'
               }}
+              onClick={() => snakeSwitch()}
             >
               <img
                 src={snakeImg}
@@ -91,6 +115,7 @@ function App() {
                 maxHeight: '2.5rem',
                 maxWidth: '2.5rem'
               }}
+              onClick={() => pacmanSwitch()}
             >
               <img
                 src={pacmanImg}
