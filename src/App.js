@@ -5,15 +5,17 @@ import {
   MDBContainer,
   MDBBtn,
   MDBBtnGroup,
-  MDBIcon
+  MDBIcon,
 } from 'mdbreact'
 import Tetris from './components/Tetris'
+import PacMan from './components/Pac-man'
+import Snake from './components/Snake'
 import pacmanImg from './img/pacman.png'
 import snakeImg from './img/snake.png'
 import tetrisImg from './img/tetris.png'
 
 function App() {
-  let [tetrisOn, setTetris] = useState(false)
+  let [tetrisOn, setTetris] = useState(true)
   let [pacmanOn, setPacman] = useState(false)
   let [snakeOn, setSnake] = useState(false)
 
@@ -21,27 +23,37 @@ function App() {
     setTetris((tetrisOn = true))
     setPacman((pacmanOn = false))
     setSnake((snakeOn = false))
-    console.log(tetrisOn)
-    console.log(pacmanOn)
-    console.log(snakeOn)
+    // console.log(tetrisOn)
+    // console.log(pacmanOn)
+    // console.log(snakeOn)
   }
 
   const pacmanSwitch = () => {
     setPacman((pacmanOn = true))
     setSnake((snakeOn = false))
     setTetris((tetrisOn = false))
-    console.log(tetrisOn)
-    console.log(pacmanOn)
-    console.log(snakeOn)
+    // console.log(tetrisOn)
+    // console.log(pacmanOn)
+    // console.log(snakeOn)
   }
 
   const snakeSwitch = () => {
     setPacman((pacmanOn = false))
     setSnake((snakeOn = true))
     setTetris((tetrisOn = false))
-    console.log(tetrisOn)
-    console.log(pacmanOn)
-    console.log(snakeOn)
+    // console.log(tetrisOn)
+    // console.log(pacmanOn)
+    // console.log(snakeOn)
+  }
+
+  const GamePlay = () => {
+    if (tetrisOn) {
+      return <Tetris />
+    } else if (snakeOn) {
+      return <Snake />
+    } else if (pacmanOn) {
+      return <PacMan />
+    }
   }
 
   return (
@@ -50,7 +62,7 @@ function App() {
         style={{
           backgroundColor: '#FFB750',
           margin: 0,
-          borderColor: '#FFB750'
+          borderColor: '#FFB750',
         }}
       >
         {/* <MDBJumbotron style={{ backgroundColor: '#FFB750', margin: 0 }}>
@@ -74,7 +86,7 @@ function App() {
                 alignItems: 'center',
                 backgroundColor: '#9650FF',
                 maxHeight: '2.5rem',
-                maxWidth: '2.5rem'
+                maxWidth: '2.5rem',
               }}
               onClick={() => tetrisSwtich()}
             >
@@ -92,7 +104,7 @@ function App() {
                 alignItems: 'center',
                 backgroundColor: '#9650FF',
                 maxHeight: '2.5rem',
-                maxWidth: '2.5rem'
+                maxWidth: '2.5rem',
               }}
               onClick={() => snakeSwitch()}
             >
@@ -101,7 +113,7 @@ function App() {
                 alt=""
                 style={{
                   maxHeight: '1.6rem',
-                  maxWidth: '1.6rem'
+                  maxWidth: '1.6rem',
                 }}
               />
             </MDBBtn>
@@ -113,7 +125,7 @@ function App() {
                 alignItems: 'center',
                 backgroundColor: '#9650FF',
                 maxHeight: '2.5rem',
-                maxWidth: '2.5rem'
+                maxWidth: '2.5rem',
               }}
               onClick={() => pacmanSwitch()}
             >
@@ -133,7 +145,7 @@ function App() {
                 height: '2rem',
                 borderRadius: '50%',
                 backgroundColor: '#9650FF',
-                marginLeft: '2rem'
+                marginLeft: '2rem',
               }}
             >
               <MDBIcon icon="caret-up" />
@@ -142,7 +154,7 @@ function App() {
               style={{
                 display: 'flex',
                 flexDirection: 'row',
-                marginRight: '1rem'
+                marginRight: '1rem',
               }}
             >
               <MDBBtn
@@ -151,7 +163,7 @@ function App() {
                   height: '2rem',
                   borderRadius: '50%',
                   backgroundColor: '#9650FF',
-                  marginRight: '2rem'
+                  marginRight: '2rem',
                 }}
               >
                 <MDBIcon icon="caret-left" />
@@ -161,7 +173,7 @@ function App() {
                   width: '2rem',
                   height: '2rem',
                   borderRadius: '50%',
-                  backgroundColor: '#9650FF'
+                  backgroundColor: '#9650FF',
                 }}
               >
                 <MDBIcon icon="caret-right" />
@@ -173,7 +185,7 @@ function App() {
                 height: '2rem',
                 borderRadius: '50%',
                 backgroundColor: '#9650FF',
-                marginLeft: '2rem'
+                marginLeft: '2rem',
               }}
             >
               <MDBIcon icon="caret-down" />
@@ -183,12 +195,12 @@ function App() {
             style={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
             }}
           >
             <MDBJumbotron id="screen">
               <MDBContainer>
-                <Tetris />
+                <GamePlay />
               </MDBContainer>
             </MDBJumbotron>
           </div>
@@ -198,22 +210,20 @@ function App() {
                 width: '3rem',
                 height: '3rem',
                 borderRadius: '50%',
-                backgroundColor: '#9650FF'
+                backgroundColor: '#9650FF',
               }}
             >
-              {' '}
-              <MDBIcon fab icon="adn" />
+              A
             </MDBBtn>
             <MDBBtn
               style={{
                 width: '3rem',
                 height: '3rem',
                 borderRadius: '50%',
-                backgroundColor: '#9650FF'
+                backgroundColor: '#9650FF',
               }}
             >
-              {' '}
-              <MDBIcon icon="bold" />
+              B
             </MDBBtn>
           </section>
         </section>
