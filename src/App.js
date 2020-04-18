@@ -55,6 +55,11 @@ function App() {
       return <PacMan />
     }
   }
+  const upBtn = document.getElementsByClassName('up')
+
+  const upBtnPress = (e) => {
+    onkeydown('ArrowUp')
+  }
 
   return (
     <div className="App">
@@ -147,6 +152,7 @@ function App() {
                 backgroundColor: '#9650FF',
                 marginLeft: '2rem',
               }}
+              className="up"
             >
               <MDBIcon icon="caret-up" />
             </MDBBtn>
@@ -165,6 +171,7 @@ function App() {
                   backgroundColor: '#9650FF',
                   marginRight: '2rem',
                 }}
+                className="left"
               >
                 <MDBIcon icon="caret-left" />
               </MDBBtn>
@@ -175,6 +182,7 @@ function App() {
                   borderRadius: '50%',
                   backgroundColor: '#9650FF',
                 }}
+                className="right"
               >
                 <MDBIcon icon="caret-right" />
               </MDBBtn>
@@ -187,6 +195,7 @@ function App() {
                 backgroundColor: '#9650FF',
                 marginLeft: '2rem',
               }}
+              className="down"
             >
               <MDBIcon icon="caret-down" />
             </MDBBtn>
@@ -212,6 +221,7 @@ function App() {
                 borderRadius: '50%',
                 backgroundColor: '#9650FF',
               }}
+              className="a"
             >
               A
             </MDBBtn>
@@ -222,6 +232,7 @@ function App() {
                 borderRadius: '50%',
                 backgroundColor: '#9650FF',
               }}
+              className="b"
             >
               B
             </MDBBtn>
