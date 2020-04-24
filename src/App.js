@@ -55,27 +55,69 @@ function App() {
       return <PacMan />
     }
   }
-  const upBtn = document.getElementsByClassName('up')
 
-  const upBtnPress = (e) => {
-    onkeydown('ArrowUp')
+  const aPress = (e) => {
+    console.log(e)
+    let aClass = document.getElementsByClassName('a')
+    if (e.key === 'a') {
+      aClass[0].style.backgroundColor = 'darkred'
+    } else return (aClass[0].style.backgroundColor = '#4f43ae')
   }
+
+  document.addEventListener('keydown', aPress)
+
+  const bPress = (e) => {
+    console.log(e)
+    let bClass = document.getElementsByClassName('b')
+    if (e.key === 's') {
+      bClass[0].style.backgroundColor = 'darkred'
+    } else return (bClass[0].style.backgroundColor = '#b5b6e4')
+  }
+
+  document.addEventListener('keydown', bPress)
+
+  const upPress = (e) => {
+    console.log(e)
+    let upClass = document.getElementsByClassName('up')
+    if (e.key === 'ArrowUp') {
+      upClass[0].style.backgroundColor = 'green'
+    } else return (upClass[0].style.backgroundColor = '#4f43ae')
+  }
+
+  document.addEventListener('keydown', upPress)
+
+  const downPress = (e) => {
+    console.log(e)
+    let downClass = document.getElementsByClassName('down')
+    if (e.key === 'ArrowDown') {
+      downClass[0].style.backgroundColor = 'green'
+    } else return (downClass[0].style.backgroundColor = '#4f43ae')
+  }
+
+  document.addEventListener('keydown', downPress)
+
+  const leftPress = (e) => {
+    console.log(e)
+    let leftClass = document.getElementsByClassName('left')
+    if (e.key === 'ArrowLeft') {
+      leftClass[0].style.backgroundColor = 'green'
+    } else return (leftClass[0].style.backgroundColor = '#4f43ae')
+  }
+
+  document.addEventListener('keydown', leftPress)
+
+  const rightPress = (e) => {
+    console.log(e)
+    let rightClass = document.getElementsByClassName('right')
+    if (e.key === 'ArrowRight') {
+      rightClass[0].style.backgroundColor = 'green'
+    } else return (rightClass[0].style.backgroundColor = '#4f43ae')
+  }
+
+  document.addEventListener('keydown', rightPress)
 
   return (
     <div className="App">
-      <header
-        style={{
-          backgroundColor: '#FFB750',
-          margin: 0,
-          borderColor: '#FFB750',
-        }}
-      >
-        {/* <MDBJumbotron style={{ backgroundColor: '#FFB750', margin: 0 }}>
-          <MDBContainer> */}
-        <h1 className="heading">DEV BOI</h1>
-        {/* </MDBContainer>
-        </MDBJumbotron> */}
-      </header>
       <section>
         <nav>
           <MDBBtnGroup
@@ -89,7 +131,7 @@ function App() {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: '#9650FF',
+                backgroundColor: '#4f43ae',
                 maxHeight: '2.5rem',
                 maxWidth: '2.5rem',
               }}
@@ -107,7 +149,7 @@ function App() {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: '#9650FF',
+                backgroundColor: '#4f43ae',
                 maxHeight: '2.5rem',
                 maxWidth: '2.5rem',
               }}
@@ -128,7 +170,7 @@ function App() {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: '#9650FF',
+                backgroundColor: '#4f43ae',
                 maxHeight: '2.5rem',
                 maxWidth: '2.5rem',
               }}
@@ -149,7 +191,7 @@ function App() {
                 width: '2rem',
                 height: '2rem',
                 borderRadius: '50%',
-                backgroundColor: '#9650FF',
+                backgroundColor: '#4f43ae',
                 marginLeft: '2rem',
               }}
               className="up"
@@ -168,7 +210,7 @@ function App() {
                   width: '2rem',
                   height: '2rem',
                   borderRadius: '50%',
-                  backgroundColor: '#9650FF',
+                  backgroundColor: '#4f43ae',
                   marginRight: '2rem',
                 }}
                 className="left"
@@ -180,7 +222,7 @@ function App() {
                   width: '2rem',
                   height: '2rem',
                   borderRadius: '50%',
-                  backgroundColor: '#9650FF',
+                  backgroundColor: '#4f43ae',
                 }}
                 className="right"
               >
@@ -192,7 +234,7 @@ function App() {
                 width: '2rem',
                 height: '2rem',
                 borderRadius: '50%',
-                backgroundColor: '#9650FF',
+                backgroundColor: '#4f43ae',
                 marginLeft: '2rem',
               }}
               className="down"
@@ -219,7 +261,7 @@ function App() {
                 width: '3rem',
                 height: '3rem',
                 borderRadius: '50%',
-                backgroundColor: '#9650FF',
+                backgroundColor: '#4f43ae',
               }}
               className="a"
             >
@@ -230,7 +272,7 @@ function App() {
                 width: '3rem',
                 height: '3rem',
                 borderRadius: '50%',
-                backgroundColor: '#9650FF',
+                backgroundColor: '#b5b6e4',
               }}
               className="b"
             >
