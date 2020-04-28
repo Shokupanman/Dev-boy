@@ -185,6 +185,43 @@ function App() {
           </MDBBtnGroup>
         </nav>
         <section className="body">
+          <section style={{ marginRight: '3rem' }}>
+            <MDBBtn
+              style={{
+                width: '3rem',
+                height: '3rem',
+                borderRadius: '50%',
+                backgroundColor: '#4f43ae',
+              }}
+              className="a"
+            >
+              A
+            </MDBBtn>
+            <MDBBtn
+              style={{
+                width: '3rem',
+                height: '3rem',
+                borderRadius: '50%',
+                backgroundColor: '#b5b6e4',
+              }}
+              className="b"
+            >
+              S
+            </MDBBtn>
+          </section>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <MDBJumbotron id="screen">
+              <MDBContainer>
+                <GamePlay />
+              </MDBContainer>
+            </MDBJumbotron>
+          </div>
           <section className="buttons">
             <MDBBtn
               style={{
@@ -240,43 +277,6 @@ function App() {
               className="down"
             >
               <MDBIcon icon="caret-down" />
-            </MDBBtn>
-          </section>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <MDBJumbotron id="screen">
-              <MDBContainer>
-                <GamePlay />
-              </MDBContainer>
-            </MDBJumbotron>
-          </div>
-          <section style={{ marginLeft: '3rem' }}>
-            <MDBBtn
-              style={{
-                width: '3rem',
-                height: '3rem',
-                borderRadius: '50%',
-                backgroundColor: '#4f43ae',
-              }}
-              className="a"
-            >
-              A
-            </MDBBtn>
-            <MDBBtn
-              style={{
-                width: '3rem',
-                height: '3rem',
-                borderRadius: '50%',
-                backgroundColor: '#b5b6e4',
-              }}
-              className="b"
-            >
-              B
             </MDBBtn>
           </section>
         </section>

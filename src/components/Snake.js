@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import './Snake.scss'
 
 function Snake() {
-  return (
-    <div>
-      <h1 style={{ color: 'white' }}>Snake</h1>
-    </div>
-  )
+  let [grid, setGrid] = useState([])
+  let [rows, setRows] = useState(10)
+  let [cols, setCols] = useState(10)
 }
 export default Snake
