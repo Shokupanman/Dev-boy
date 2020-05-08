@@ -14,4 +14,15 @@
   background-color: darkcyan;
   border: 1px solid green;
   margin: 2px;
+  z-index: 2;
+}
+
+.snakeFood {
+  position: absolute;
+  width: 1.5%;
+  height: 4%;
+  background-color: red;
+  border: 1px solid pink;
+  margin: 2px;
+  z-index: 1;
 }
