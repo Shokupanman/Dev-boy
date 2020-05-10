@@ -7,9 +7,9 @@ import {
   MDBBtnGroup,
   MDBIcon,
 } from 'mdbreact'
-import Tetris from './components/Tetris'
-import PacMan from './components/Pac-man'
-import Snake from './components/Snake'
+import Tetris from './components/Tetris/Tetris'
+import PacMan from './components/Pac-man/Pac-man'
+import Snake from './components/Snake/Snake'
 import pacmanImg from './img/pacman.png'
 import snakeImg from './img/snake.png'
 import tetrisImg from './img/tetris.png'
@@ -57,7 +57,7 @@ function App() {
   }
 
   const aPress = (e) => {
-    console.log(e)
+    //console.log(e)
     let aClass = document.getElementsByClassName('a')
     if (e.key === 'a') {
       aClass[0].style.backgroundColor = 'darkred'
@@ -67,7 +67,7 @@ function App() {
   document.addEventListener('keydown', aPress)
 
   const bPress = (e) => {
-    console.log(e)
+    //console.log(e)
     let bClass = document.getElementsByClassName('b')
     if (e.key === 's') {
       bClass[0].style.backgroundColor = 'darkred'
@@ -77,7 +77,7 @@ function App() {
   document.addEventListener('keydown', bPress)
 
   const upPress = (e) => {
-    console.log(e)
+    //console.log(e)
     let upClass = document.getElementsByClassName('up')
     if (e.key === 'ArrowUp') {
       upClass[0].style.backgroundColor = 'green'
@@ -87,7 +87,7 @@ function App() {
   document.addEventListener('keydown', upPress)
 
   const downPress = (e) => {
-    console.log(e)
+    //console.log(e)
     let downClass = document.getElementsByClassName('down')
     if (e.key === 'ArrowDown') {
       downClass[0].style.backgroundColor = 'green'
@@ -97,7 +97,7 @@ function App() {
   document.addEventListener('keydown', downPress)
 
   const leftPress = (e) => {
-    console.log(e)
+    //console.log(e)
     let leftClass = document.getElementsByClassName('left')
     if (e.key === 'ArrowLeft') {
       leftClass[0].style.backgroundColor = 'green'
@@ -107,7 +107,7 @@ function App() {
   document.addEventListener('keydown', leftPress)
 
   const rightPress = (e) => {
-    console.log(e)
+    //console.log(e)
     let rightClass = document.getElementsByClassName('right')
     if (e.key === 'ArrowRight') {
       rightClass[0].style.backgroundColor = 'green'
